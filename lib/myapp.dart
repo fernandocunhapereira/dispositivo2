@@ -21,8 +21,10 @@ class MyApp extends StatelessWidget {
         title: 'Gerenciador de Projetos',
         theme: ThemeData(
             colorScheme: ThemeData().colorScheme.copyWith(
-                primary: const Color.fromARGB(255, 80, 29, 161),
-                secondary: const Color.fromARGB(255, 245, 245, 48)),
+                //primary: const Color.fromARGB(255, 80, 29, 161),
+                //secondary: const Color.fromARGB(255, 245, 245, 48)),
+                primary: Color.fromARGB(255, 39, 122, 185),
+                secondary: Color.fromARGB(255, 255, 255, 255)),
             //primarySwatch: Colors.purple,
             //accentColor: Colors.amber,
             fontFamily: 'Raleway',
