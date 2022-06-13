@@ -59,64 +59,88 @@ class _UsuarioPageState extends State<UsuarioPage> {
   @override
   Widget build(BuildContext context) {
     //final projeto = ModalRoute.of(context)!.settings.arguments as Projeto;
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Usuários'),
-        actions: [
-          IconButton(
-              onPressed: () {
-                novoUsuario();
-              },
-              icon: const Icon(Icons.person_add))
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(colors:[
+          Color.fromARGB(255, 255, 255, 255), 
+          Color.fromARGB(255, 60, 210, 223)
         ],
+        //begin: const FractionalOffset(0.0, 0.0),
+        //end: const FractionalOffset(1.0, 0.0),
+        begin: Alignment.bottomLeft,
+        end: Alignment.topRight,
+        stops: [0.0, 1.0],
+        tileMode: TileMode.clamp
+        )
       ),
-      body: Column(
-        children: <Widget>[
-          // Card(
-          //   shape:
-          //       RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-          //   elevation: 4,
-          //   margin: const EdgeInsets.all(10),
-          //   color: const Color.fromARGB(255, 238, 229, 248),
-          //   child: Column(children: <Widget>[
-          //     Padding(
-          //       padding: const EdgeInsets.all(8.0),
-          //       child: TextField(
-          //         controller: _usuarioControllerNome,
-          //         decoration: const InputDecoration(
-          //           labelText: 'Nome',
-          //           border: OutlineInputBorder(),
-          //         ),
-          //       ),
-          //     ),
-          //     Padding(
-          //       padding: const EdgeInsets.all(8.0),
-          //       child: TextField(
-          //         controller: _usuarioControllerEmail,
-          //         decoration: const InputDecoration(
-          //           labelText: 'Email',
-          //           border: OutlineInputBorder(),
-          //         ),
-          //       ),
-          //     ),
-          //   ]),
-          // ),
-          // const Divider(
-          //   height: 20,
-          // ),
-          // ElevatedButton(
-          //     onPressed: salvarUsuario,
-          //     child: const Text(
-          //       'Salvar',
-          //     )),
-          Expanded(
-              child: AnimatedBuilder(
-            animation: _controller.state,
-            builder: (context, child) {
-              return GerenciaEstado(_controller.state.value);
-            },
-          ))
-        ],
+      child: Scaffold(
+        backgroundColor: Colors.transparent,
+        appBar: AppBar(
+          flexibleSpace: Container(
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [Color.fromARGB(255, 7, 70, 243), Color.fromARGB(255, 141, 247, 247), Color.fromARGB(255, 184, 132, 248)]),
+              ),
+          ),
+          title: const Text('Usuários'),
+          actions: [
+            IconButton(
+                onPressed: () {
+                  novoUsuario();
+                },
+                icon: const Icon(Icons.person_add))
+          ],
+        ),
+        body: Column(
+          children: <Widget>[
+            // Card(
+            //   shape:
+            //       RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            //   elevation: 4,
+            //   margin: const EdgeInsets.all(10),
+            //   color: const Color.fromARGB(255, 238, 229, 248),
+            //   child: Column(children: <Widget>[
+            //     Padding(
+            //       padding: const EdgeInsets.all(8.0),
+            //       child: TextField(
+            //         controller: _usuarioControllerNome,
+            //         decoration: const InputDecoration(
+            //           labelText: 'Nome',
+            //           border: OutlineInputBorder(),
+            //         ),
+            //       ),
+            //     ),
+            //     Padding(
+            //       padding: const EdgeInsets.all(8.0),
+            //       child: TextField(
+            //         controller: _usuarioControllerEmail,
+            //         decoration: const InputDecoration(
+            //           labelText: 'Email',
+            //           border: OutlineInputBorder(),
+            //         ),
+            //       ),
+            //     ),
+            //   ]),
+            // ),
+            // const Divider(
+            //   height: 20,
+            // ),
+            // ElevatedButton(
+            //     onPressed: salvarUsuario,
+            //     child: const Text(
+            //       'Salvar',
+            //     )),
+            Expanded(
+                child: AnimatedBuilder(
+              animation: _controller.state,
+              builder: (context, child) {
+                return GerenciaEstado(_controller.state.value);
+              },
+            ))
+          ],
+        ),
       ),
     );
   }
