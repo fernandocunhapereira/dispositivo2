@@ -27,10 +27,20 @@ class _UsuarioListViewState extends State<UsuarioListView> {
           children: <Widget>[
             ListTile(
               leading: CircleAvatar(
-                backgroundColor: Theme.of(context).colorScheme.secondary,
-                child: Text('${_controller.usuarios[index].id}'),
+                backgroundColor: Theme.of(context).colorScheme.primary,
+                child: Text('${_controller.usuarios[index].id}',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
               ),
-              title: Text(_controller.usuarios[index].nome),
+              title: Text(_controller.usuarios[index].nome,
+                style: TextStyle(
+                  //color:Colors.white,
+                  color:Colors.black,
+                )
+              ),
               subtitle: Text(_controller.usuarios[index].email),
 
               trailing: SizedBox(
@@ -42,7 +52,8 @@ class _UsuarioListViewState extends State<UsuarioListView> {
                           updateCliente(_controller.usuarios[index]);
                         },
                         icon: const Icon(Icons.edit),
-                        color: Colors.orange,
+                        //color: Colors.orange,
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                       IconButton(
                         onPressed: () {
@@ -50,7 +61,8 @@ class _UsuarioListViewState extends State<UsuarioListView> {
                               .deleteUsuario(_controller.usuarios[index]);
                         },
                         icon: const Icon(Icons.delete),
-                        color: Colors.red,
+                        //color: Color.fromARGB(255, 183, 31, 20),
+                        color: Theme.of(context).colorScheme.primary,
                       ),
                     ],
                   )),

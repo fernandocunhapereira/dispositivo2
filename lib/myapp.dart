@@ -24,11 +24,13 @@ class MyApp extends StatelessWidget {
                 //primary: const Color.fromARGB(255, 80, 29, 161),
                 //secondary: const Color.fromARGB(255, 245, 245, 48)),
                 primary: Color.fromARGB(255, 39, 122, 185),
-                secondary: Color.fromARGB(255, 255, 255, 255)),
+                //secondary: Color.fromARGB(255, 255, 255, 255)),
+                secondary: Color.fromARGB(255, 123, 243, 247)),
             //primarySwatch: Colors.purple,
             //accentColor: Colors.amber,
             fontFamily: 'Raleway',
-            canvasColor: const Color.fromRGBO(255, 254, 229, 1),
+            //canvasColor: const Color.fromRGBO(255, 254, 255, 1),
+            canvasColor: Color.fromARGB(255, 255, 255, 255),
             textTheme: ThemeData.light().textTheme.copyWith(
                     headline6: const TextStyle(
                   fontSize: 20,
