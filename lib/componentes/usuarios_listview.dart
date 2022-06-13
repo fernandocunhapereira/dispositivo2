@@ -61,8 +61,8 @@ class _UsuarioListViewState extends State<UsuarioListView> {
                               .deleteUsuario(_controller.usuarios[index]);
                         },
                         icon: const Icon(Icons.delete),
-                        //color: Color.fromARGB(255, 183, 31, 20),
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Color.fromARGB(255, 183, 31, 20),
+                        //color: Theme.of(context).colorScheme.primary,
                       ),
                     ],
                   )),

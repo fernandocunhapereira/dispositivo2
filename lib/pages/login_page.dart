@@ -33,8 +33,8 @@ class _LoginPageState extends State<LoginPage> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Image.asset('assets/images/icone_login.png',width: 100, height: 100, fit: BoxFit.cover,),
-
+            //Image.asset('assets/images/icone_login.png',width: 100, height: 100, fit: BoxFit.cover,),
+            Image.asset('assets/images/icone1.png',width: 150, height: 150, fit: BoxFit.cover,),
             Card(
               shape:
                   RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
